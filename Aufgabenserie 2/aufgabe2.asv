@@ -1,7 +1,7 @@
 [data, frequence] = audioread(strrep('data\gdur.wav', '\', filesep));
 
-duration = length(data)/frequence;
-time = [ 1/frequence : 1/frequence : duration ];
+dur
+time = [ (1/frequence) : (1/frequence) : (length(data)/frequence) ];
 xValues = [0, duration];
 
 arithmeticAverage = mean(data);
@@ -9,12 +9,10 @@ standardDeviation = sqrt(var(data));
 minValue = min(data);
 maxValue = max(data);
 
-hold;
 grid on;
+hold;
 dataPlot = plot(time, data, 'Color', [0.0, 0.35, 0.50], 'LineWidth', 1);
-title('Signal gdur.wav');
-ylabel('x_i');
-xlabel('t [s]');
+
 
 arithmeticAveragePlot = plot(xValues, [arithmeticAverage, arithmeticAverage], 'Color', [0.81, 0.13, 0.16], 'LineWidth', 1);
 standardDeviationPlot = plot(xValues, [arithmeticAverage + standardDeviation, arithmeticAverage + standardDeviation], ...

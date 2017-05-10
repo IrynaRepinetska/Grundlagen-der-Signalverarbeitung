@@ -11,6 +11,6 @@ totalInformationContent = sum(singleInformationContent);
 maximumInformationContent = reallog(256) / reallog(2);
 redundancy = maximumInformationContent - totalInformationContent;
 
-disp(['Die Entropie der eingelesenen Datei ist ', num2str(totalInformationContent), '.']);
-disp(['Die maximal mögliche Entropie bei ASCII-Kodierung wäre ', num2str(maximumInformationContent), ...
-      ', die Redundanz beträgt also ', num2str(redundancy), '!']);
+disp(['The average information count (entropy) of the content of the file is ', num2str(totalInformationContent), '.']);
+disp(['The maximum possible information count (entropy) with ASCII encoding would be ', num2str(maximumInformationContent), ...
+      ', so redundancy is ', num2str(redundancy), '!']);
