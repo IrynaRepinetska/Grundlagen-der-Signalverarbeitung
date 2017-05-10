@@ -1,3 +1,6 @@
+%Gruppenname: iryna&philipp
+%562366 Iryna Repinetska
+%565229 Philipp Waldinger
 function [augensumme] = wuerfelbecher(wuerfel, wuerfe, max_augenziffer)
 if(ceil(wuerfel) ~= wuerfel || wuerfel <=0)
     error('Die Anzahl der Wuerfeln im Becher sollte eine nat. Zahl größer Null sein.')
@@ -8,8 +11,7 @@ end
 if(ceil(wuerfe) ~= wuerfe || wuerfe <=0)
     error('Die Wuerfeanzahl sollte eine nat. Zahl größer Null sein.')
 end
-%die maximale Augensumme, die entstehen kann
-max = wuerfel * max_augenziffer;
-%augensumme hat so viele Elemente wie die Zahl der Wuerfe
-augensumme = randi([1 max], 1, wuerfe);
+
+m = randi([1 max_augenziffer], wuerfel, wuerfe);
+augensumme = sum (m);
 end
