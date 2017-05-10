@@ -1,3 +1,6 @@
+% Iryna Repinetska 562366
+% Philipp Waldinger 565229
+
 function [ augensumme ] = wuerfelbecher( wuerfel, wuerfe, max_augenziffer )
 
 if (ceil(wuerfel) ~= floor(wuerfel)) || (numel(wuerfel) ~= 1) || (wuerfel < 0)
