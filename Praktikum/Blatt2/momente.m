@@ -1,6 +1,9 @@
+%Gruppenname: iryna&philipp
+%562366 Iryna Repinetska
+%565229 Philipp Waldinger
 function [m1,m2,z2,z3,z4] = momente(daten)
 %prüfe ob daten keine komplexe Zahlen enthalten
-if (isreal(daten)==0)
+if (isnumeric(daten)==0 || isreal(daten)==0)
     error('an input should not contain complex numbers or strings')
 end
 
