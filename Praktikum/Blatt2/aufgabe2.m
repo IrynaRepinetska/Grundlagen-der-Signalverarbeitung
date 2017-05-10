@@ -1,4 +1,7 @@
-edit[y,Fs] = audioread('gdur.wav') ;
+%Gruppenname: iryna&philipp
+%562366 Iryna Repinetska
+%565229 Philipp Waldinger
+[y,Fs] = audioread('gdur.wav') ;
 % sampled data, y, and a sample rate for that data, Fs
 % sound(y,Fs);
 %Aufruf von der Funktion momente, um m1 und z2 zu bestimmen.
@@ -8,16 +11,8 @@ st_ab=sqrt(z2);
 st_ab_plus = m1 + st_ab;
 st_ab_minus = m1 - st_ab;
 %Besimmung max und min Wert in y
-max = y(1);
-min = y(1);
-for k = 1:length(y)
-    if(max < y(k))
-        max = y(k);
-    end
-    if(min > y(k))
-        min = y(k);
-    end
-end
+max = max(y);
+min = min(y);
 sprintf('Der Mittelwert ist %f,\ndie Standardabweichung ist %f,\nder Minimunwert ist %f,\nder Maximumwert ist %f.\n', m1, st_ab, min, max)
 
 %graph erstellen
