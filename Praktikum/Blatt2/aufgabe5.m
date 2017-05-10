@@ -1,15 +1,16 @@
+%Gruppenname: iryna&philipp
+%562366 Iryna Repinetska
+%565229 Philipp Waldinger
 %open file
 fileID = fopen('shake.txt');
 if(fileID == -1)
     error('file can not be opened')
 end
 %A is a colomn vector of a binary data that is 7 bits long
-A = fread(fileID,'ubit7');
+A = fread(fileID,'ubit8');
 fclose(fileID);
 %binary to char
 A_ascii = char(A);
-disp('Die ASCII-kodierten Zeichen der Datei');
-disp(A_ascii);
 %die Haeufigkeit für verschiedene Zeichen zu bestimmen
 [wert,anzahl] = haeufigkeit(A_ascii);
 %relative Haeufigkeit zu berechnen
